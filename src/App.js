@@ -1,5 +1,6 @@
 import React from "react";
 import CardVideo from "./Componentes/CardVideo";
+import { StyledHeader, StyledMain, StyledNav } from "./Styled";
 import "./styles.css";
 
 export default function App() {
@@ -12,13 +13,13 @@ export default function App() {
   return (
     <div>
       <div className="tela-inteira">
-        <header>
+        <StyledHeader>
           <h1>LabeTube</h1>
           <input type="text" placeholder="Busca" id="campoDeBusca" />
-        </header>
+        </StyledHeader>
 
-        <main>
-          <nav className="menu-vertical">
+        <StyledMain>
+          <StyledNav>
             <ul>
               <li className="botoes-meunu-vertical">Início</li>
               <li className="botoes-meunu-vertical">Em alta</li>
@@ -27,7 +28,7 @@ export default function App() {
               <li className="botoes-meunu-vertical">Originais</li>
               <li className="botoes-meunu-vertical">Histórico</li>
             </ul>
-          </nav>
+          </StyledNav>
 
           <section className="painel-de-videos">
             <CardVideo
@@ -36,7 +37,7 @@ export default function App() {
               textoAlternativo={card1.textoAlternativo}
             />
           </section>
-        </main>
+        </StyledMain>
 
         <footer>
           <h4>Oi! Eu moro no footer!</h4>
